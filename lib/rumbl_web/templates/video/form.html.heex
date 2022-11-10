@@ -19,6 +19,11 @@
       <%= error_tag f, :title %>
     </div>
 
+    <div class="col-span-3">
+      <%= label f, :category_id, "Category", class: "block text-sm text-gray-700 font-medium" %>
+      <%= select f, :category_id, category_select_options(@categories), prompt: "Choose a category", class: "mt-1 w-full py-2 px-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500" %>
+    </div>
+
     <div class="col-span-6">
       <%= label f, :description, class: "block text-sm text-gray-700 font-medium" %>
       <%= textarea f, :description, class: "mt-1 w-full py-2 px-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500" %>
