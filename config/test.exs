@@ -28,3 +28,6 @@ config :logger, level: :warn
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# ease up the number of hashing rounds to speed up our test
+config :pbkdf2_elixir, :rounds, 1
