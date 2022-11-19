@@ -23,10 +23,11 @@
                                 <td class="truncate py-2 pl-4 pr-2 text-gray-800 text-sm font-medium"><%= video.url %></td>
                                 <td class="truncate py-2 px-4 text-gray-800 text-sm font-medium"><%= video.title %></td>
                                 <td class="truncate py-2 px-4 text-gray-800 text-sm font-medium"><%= video.description %></td>
-                                <td class="whitespace-nowrap py-2 pl-4 pr-2 text-gray-800 text-sm font-medium">
-                                    <span class="space-x-4">
+                                <td class="whitespace-nowrap py-2 pl-4 pr-2 text-gray-800 text-sm font-medium sm:pr-6">
+                                    <span class="space-x-2">
                                         <%= link "Edit", to: Routes.video_path(@conn, :edit, video), class: "text-sm text-emerald-500 hover:underline hover:text-emerald-600" %>
-                                        <%= link "View", to: Routes.video_path(@conn, :show, video), class: "text-sm text-emerald-500 hover:underline hover:text-emerald-600" %>
+                                        <%# link "View", to: Routes.video_path(@conn, :show, video), class: "text-sm text-emerald-500 hover:underline hover:text-emerald-600" %>
+                                        <%= link "Watch", to: Routes.watch_path(@conn, :show, video), class: "text-sm text-emerald-500 hover:underline hover:text-emerald-600" %>
                                         <%= link "Delete", to: Routes.video_path(@conn, :delete, video), method: :delete, data: [confirm: "Are you sure?"], class: "text-sm text-red-500 hover:underline hover:text-red-600" %>
                                     </span> 
                                 </td>

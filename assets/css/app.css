@@ -2,9 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-[x-cloak] {
-  @apply hidden
-}
+  [x-cloak] {
+    @apply hidden
+  }
+
+  .annotations {
+    @apply border-l border-gray-200;
+  }
+  #msg-container {
+    @apply min-h-[260px]
+  }
 
 /* This file is for your main application CSS */
 

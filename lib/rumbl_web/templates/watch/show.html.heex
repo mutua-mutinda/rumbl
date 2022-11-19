@@ -1,0 +1,15 @@
+<div class="grid grid-cols-12 gap-4">
+        <div class="col-span-9 space-y-3">
+            <h1 class="text-lg text-gray-600 font-semibold"><%= @video.title %></h1>
+            <%= content_tag :div, id: "video", data: [id: @video.id, player_id: player_id(@video)] do %>
+            <% end %>
+        </div>
+        <div class="col-span-3 flex flex-col min-h-full annotations px-4">
+            <h3  class="text-lg text-gray-600 font-semibold">Annotations</h3>
+            <div id="msg-container" class="flex-1"> </div>
+        <div class="space-y-4 flex flex-col">
+            <textarea id="msg-input" rows="3" placeholder="Comment..." class="block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm"></textarea>
+            <button id="msg-submit" class="ml-auto rounded border border-transparent bg-emerald-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"  type="submit"> Post </button>
+        </div>
+    </div>
+</div>

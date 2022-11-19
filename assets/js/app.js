@@ -25,10 +25,19 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 import Alpine from 'alpinejs'
+import Player from './player'
+
+let video = document.getElementById("video")
+if(video) {
+    Player.init(video.id, video.getAttribute("data-player-id"), () => {
+        console.log("player ready!")
+    })
+}
  
 window.Alpine = Alpine
  
 Alpine.start()
+
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
