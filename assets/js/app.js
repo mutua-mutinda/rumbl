@@ -26,6 +26,8 @@ import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 import Alpine from 'alpinejs'
 import Player from './player'
+import socket from "./socket"
+import Video from "./video"
 
 let video = document.getElementById("video")
 if(video) {
@@ -33,6 +35,8 @@ if(video) {
         console.log("player ready!")
     })
 }
+
+Video.init(socket, video)
  
 window.Alpine = Alpine
  
